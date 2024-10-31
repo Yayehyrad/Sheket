@@ -1,22 +1,44 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { reviewdata } from "../data/export";
+ 
 import { FaStar } from "react-icons/fa6";
+import client1 from "../assets/client1.png";
+import client2 from "../assets/client2.png";
+import client3 from "../assets/client3.png";
+import client4 from "../assets/client4.png";
+import client5 from "../assets/client5.png";
+import client6 from "../assets/client6.png";
+
+const reviewdata = [
+    {img : client1},
+    {img : client2},
+    {img : client3},
+    {img : client4},
+    {img : client5},
+    {img : client6}
+
+]
+
  
  
 
 
 
 
-const Reviews = () => {
+const Brands = () => {
   const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
+    dots: false,
+    arrows : false,
+    infinite: true,   
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     initialSlide: 0,
+    autoplay: true,
+    
     responsive: [
       {
         breakpoint: 1024,
@@ -45,29 +67,16 @@ const Reviews = () => {
     ]
   };
   return (
-    <div className=" w-full px-5 lg:px-20 py-[80px] bg-gray-300 flex flex-col justify-center items-center gap-4">
-
-    <p className=" text-accent text-xl font-semibold "> 1300+ satisfied clients </p>
-    <p className=" text-black text-5xl font-bold"> Our Customers </p>
-      <div className=" w-full mt-10">
+    <div className=" w-full py-[80px]  flex flex-col justify-center items-center gap-4">
+      <div className=" w-full mx-5">
         <Slider className=" w-full" {...settings} >
 
           {
             reviewdata.map((item , index)=>{
                 return(
                   <div className="px-1">
-                  <div className=" w-full flex flex-col items-center justify-center gap-4 p-3 lg:0-10 group group-hover:shadow-xl bg-white bg-opacity-50 backdrop-blur-lg">
+                  <div className=" w-full flex flex-col items-center justify-center gap-4 p-3 lg:0-10 group group-hover:shadow-xl bg-gray-400 bg-opacity-50 backdrop-blur-lg">
                     <img src={item.img} alt="" className=" w-1/2 rounded-full  m-auto" />
-                    <p className=" text-black capitalize font-bold">{item.name}</p>
-                    <div className=" flex">
-                      {Array.from({ length: 5 }).map((_, index) => {
-                              return <FaStar />
-                        })
-                        }
-                        </div>
-                        <p className="text-gray-600">
-                          {item.para}
-                        </p>
                   </div>
                 </div>
                 )
@@ -82,4 +91,4 @@ const Reviews = () => {
   )
 }
 
-export default Reviews
+export default Brands
