@@ -48,7 +48,7 @@ const Hero = () => {
                             <p className="  border-white border-2 p-3 rounded-lg text-3xl md:text-5xl text-white">
                                 Get a Discount upto 80%
                             </p>
-                            <h1 className=" text-9xl mt-4 font-bold text-white uppercase">
+                            <h1 className=" text-4xl sm:text-6x md:text-9xl mt-4 font-bold text-white uppercase">
                                 {item.name} 
                                 <br />
                                 {item.type}
