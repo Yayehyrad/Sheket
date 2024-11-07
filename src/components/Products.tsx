@@ -1,7 +1,6 @@
 import { BsEye } from "react-icons/bs"
 import { products } from "../data/export"
 import { BiHeartCircle } from "react-icons/bi"
-import { PiNeedle } from "react-icons/pi"
 import { CgShoppingCart } from "react-icons/cg"
 const Products = () => {
   return (
