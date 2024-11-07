@@ -44,7 +44,7 @@ const Hero = () => {
                 return(
                     <div className=" relative">
                     <div className=" w-[100%] h-screen flex bg-cover bg-center flex-col" style={{backgroundImage : `url(${item.img})` ,  filter: 'hue-rotate(180deg)' }}>
-                        <div className=" w-full md:w-1/2  h-full flex flex-col justify-center items-start gap-10 md:pl-28">
+                        <div className=" w-full md:w-1/2  h-full flex flex-col justify-center items-start gap-10 md:pl-28 pl-5">
                             <p className="  border-white mt-2 border-2 p-3 rounded-lg text-xl lg:text-3xl md:text-5xl text-white">
                                 Get a Discount upto 80%
                             </p>
