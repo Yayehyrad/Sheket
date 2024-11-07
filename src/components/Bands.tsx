@@ -2,7 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
  
-import { FaStar } from "react-icons/fa6";
+ 
 import client1 from "../assets/client1.png";
 import client2 from "../assets/client2.png";
 import client3 from "../assets/client3.png";
@@ -72,7 +72,7 @@ const Brands = () => {
         <Slider className=" w-full" {...settings} >
 
           {
-            reviewdata.map((item , index)=>{
+            reviewdata.map((item)=>{
                 return(
                   <div className="px-1">
                   <div className=" w-full flex flex-col items-center justify-center gap-4 p-3 lg:0-10 group group-hover:shadow-xl bg-gray-400 bg-opacity-50 backdrop-blur-lg">

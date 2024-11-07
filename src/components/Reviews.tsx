@@ -53,14 +53,14 @@ const Reviews = () => {
         <Slider className=" w-full" {...settings} >
 
           {
-            reviewdata.map((item , index)=>{
+            reviewdata.map((item )=>{
                 return(
                   <div className="px-1">
                   <div className=" w-full flex flex-col items-center justify-center gap-4 p-3 lg:0-10 group group-hover:shadow-xl bg-white bg-opacity-50 backdrop-blur-lg">
                     <img src={item.img} alt="" className=" w-1/2 rounded-full  m-auto" />
                     <p className=" text-black capitalize font-bold">{item.name}</p>
                     <div className=" flex">
-                      {Array.from({ length: 5 }).map((_, index) => {
+                      {Array.from({ length: 5 }).map(() => {
                               return <FaStar />
                         })
                         }
